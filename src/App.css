@@ -1,0 +1,139 @@
+.start_page {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #eb4454;
+}
+
+.main_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.blob {
+  display: flex;
+  width: 70%;
+  background-color: transparent;
+  justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .blob {
+    width: 100%;
+  }
+}
+
+.circle_left_top {
+  height: 28vh;
+  width: 28vh;
+  background-color: #ffd101;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  left: 10px;
+}
+
+.circle_middle {
+  height: 23vh;
+  width: 23vh;
+  background-color: #ffd101;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle_right {
+  height: 30vh;
+  width: 30vh;
+  background-color: #ffd101;
+  border-radius: 50%;
+  position: absolute;
+  top: -8%;
+  left: 88%;
+}
+
+.start-button {
+  height: 12%;
+  width: 32%;
+  font-size: 36px;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  border: none;
+  background: none;
+  outline: none;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0px 30px 25px #303f9f(236, 0, 244, 0.45));
+}
+
+.start-button:before,
+.start-button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(0 11%, 100% 0, 90% 88%, 3% 96%);
+  transition: 1s all;
+  background: #303f9f;
+}
+
+.start-button:before {
+  background: #303f9f;
+  transform: scale(1.05, 1.12);
+}
+
+.start-button:hover:before,
+.start-button:hover:after {
+  cursor: default;
+  clip-path: polygon(5% 2%, 100% 5%, 100% 100%, 0% 94%);
+}
+
+.dash_left_bottom {
+  width: 400px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -50px;
+  left: -80px;
+}
+
+.dash_right_bottom {
+  width: 500px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -130px;
+  right: -90px;
+}
+
+@media (max-width: 991px) {
+  .blob {
+    width: 100%;
+  }
+  .dash_left_bottom,
+  .dash_right_bottom {
+    width: 300px;
+  }
+  .circle_left_top {
+    height: 20vh;
+    width: 20vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .start-button {
+    width: 80%;
+  }
+  .blob {
+    height: 900px;
+  }
+}
